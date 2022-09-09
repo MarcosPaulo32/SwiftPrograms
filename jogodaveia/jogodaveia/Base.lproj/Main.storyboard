@@ -27,14 +27,6 @@
                                 <rect key="frame" x="140" y="23" width="101" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xiszinho" translatesAutoresizingMaskIntoConstraints="NO" id="VN9-wq-0ph">
-                                <rect key="frame" x="98" y="189" width="184" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circulozinho" translatesAutoresizingMaskIntoConstraints="NO" id="nNL-rD-rIW">
-                                <rect key="frame" x="109" y="364" width="162" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ou?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBx-g3-RtX">
                                 <rect key="frame" x="153" y="323" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,8 +34,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNG-qh-weG">
+                                <rect key="frame" x="113" y="176" width="149" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="" image="xiszinho"/>
+                                <connections>
+                                    <action selector="xiszin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NUa-Vi-iLh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fa-Op-kia">
+                                <rect key="frame" x="128" y="361" width="125" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="" image="circulozinho"/>
+                                <connections>
+                                    <action selector="circrinho:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STD-ua-MyF"/>
+                                </connections>
+                            </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh5-Hl-g0X">
-                                <rect key="frame" x="38" y="189" width="299" height="302"/>
+                                <rect key="frame" x="41" y="176" width="299" height="314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-bh-uFA">
@@ -110,26 +120,6 @@
                                             <action selector="XO4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gDq-C6-klW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4m-3s-K0U">
-                                        <rect key="frame" x="215" y="8" width="80" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <action selector="XO7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6I1-CK-a4F"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8D-s3-VxG">
-                                        <rect key="frame" x="107" y="271" width="82" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" systemColor="systemRedColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Fechar"/>
-                                        <connections>
-                                            <action selector="fechar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bDu-vW-BCL"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcF-xR-l30">
                                         <rect key="frame" x="215" y="182" width="80" height="73"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -150,6 +140,26 @@
                                             <action selector="XO8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tFd-0O-Qqg"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8D-s3-VxG">
+                                        <rect key="frame" x="107" y="271" width="82" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Fechar"/>
+                                        <connections>
+                                            <action selector="fechar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bDu-vW-BCL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4m-3s-K0U">
+                                        <rect key="frame" x="219" y="8" width="80" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="XO7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6I1-CK-a4F"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                             </view>
@@ -158,9 +168,18 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <connections>
-                        <outlet property="circrinho" destination="nNL-rD-rIW" id="p93-8c-LnP"/>
+                        <outlet property="botaofechar" destination="n8D-s3-VxG" id="qbv-jD-75t"/>
                         <outlet property="jogodavelha" destination="mh5-Hl-g0X" id="7GN-Mm-DAR"/>
-                        <outlet property="xiszin" destination="VN9-wq-0ph" id="znS-6r-Nbj"/>
+                        <outlet property="viewjogodavelha" destination="mh5-Hl-g0X" id="NZG-ar-gu8"/>
+                        <outlet property="xo1" destination="chS-Fb-lSW" id="NEW-n2-WDd"/>
+                        <outlet property="xo2" destination="HAD-1X-23Z" id="W0z-GO-Tlt"/>
+                        <outlet property="xo3" destination="FXK-Mm-eiu" id="NIT-zx-zYX"/>
+                        <outlet property="xo4" destination="jPf-Ld-eXM" id="Ql4-zq-dfQ"/>
+                        <outlet property="xo5" destination="7SH-PN-SCS" id="VXO-F5-E3E"/>
+                        <outlet property="xo6" destination="fSd-DK-dz1" id="8hQ-Xk-3M5"/>
+                        <outlet property="xo7" destination="s4m-3s-K0U" id="faA-8Z-CsO"/>
+                        <outlet property="xo8" destination="mjm-WX-QhN" id="waS-fe-eUm"/>
+                        <outlet property="xo9" destination="DcF-xR-l30" id="Jmb-R0-1Cv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
