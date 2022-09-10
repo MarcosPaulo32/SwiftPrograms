@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     // View do Jogo da Velha
-    @IBOutlet weak var viewjogodavelha: UIView!
+    @IBOutlet weak var viewdeselecao: UIView!
     // Variável dos Botões
     @IBOutlet weak var xo1: UIButton!
     @IBOutlet weak var xo2: UIButton!
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     // Var do botão de fechar
     @IBOutlet weak var botaofechar: UIButton!
     // Variável da escolhe entre círculo e X
-    var choose = 1
+    var choose = 0
     
     
     override func viewDidLoad() {
@@ -32,111 +32,114 @@ class ViewController: UIViewController {
     }
     @IBAction func xiszin(_ sender: Any) {
         choose = 1
+        view.isHidden = true
     }
     @IBAction func circrinho(_ sender: Any) {
         choose = 2
+        viewdeselecao.isHidden = true
+        
     }
     @IBAction func XO1(_ sender: Any) {
         if choose == 1{
-            xo1.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo1.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo1.isUserInteractionEnabled = false
         }else{
-            xo1.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo1.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo1.isUserInteractionEnabled = false
         }
     }
     @IBAction func XO2(_ sender: Any) {
         if choose == 1{
-            xo2.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo2.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo2.isUserInteractionEnabled = false
         }else{
-            xo2.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo2.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo2.isUserInteractionEnabled = false
         }
     }
     @IBAction func XO3(_ sender: Any) {
         if choose == 1{
-            xo3.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo3.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo3.isUserInteractionEnabled = false
         }else{
-            xo3.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo3.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo3.isUserInteractionEnabled = false
         }
     }
     @IBAction func XO4(_ sender: Any) {
         if choose == 1{
-            xo4.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo4.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo4.isUserInteractionEnabled = false
         }else{
-            xo4.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo4.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo4.isUserInteractionEnabled = false
         }
     }
     @IBAction func XO5(_ sender: Any) {
         if choose == 1{
-            xo5.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo5.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo5.isUserInteractionEnabled = false
         }else{
-            xo5.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo5.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo5.isUserInteractionEnabled = false
         }
     }
     @IBAction func XO6(_ sender: Any) {
         if choose == 1{
-            xo6.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo6.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo6.isUserInteractionEnabled = false
         }else{
-            xo6.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo6.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo6.isUserInteractionEnabled = false
         }
     }
     @IBAction func XO7(_ sender: Any) {
         if choose == 1{
-            xo7.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo7.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo7.isUserInteractionEnabled = false
         }else{
-            xo7.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo7.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo7.isUserInteractionEnabled = false
         }
     }
     @IBAction func XO8(_ sender: Any) {
         if choose == 1{
-            xo8.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo8.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo8.isUserInteractionEnabled = false
         }else{
-            xo8.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo8.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo8.isUserInteractionEnabled = false
         }
     }
     @IBAction func XO9(_ sender: Any) {
         if choose == 1{
-            xo9.setBackgroundImage(UIImage(named: "xiszinho"), for: .normal)
+            xo9.setBackgroundImage(UIImage(named: "xis"), for: .normal)
             choose = 2
             xo9.isUserInteractionEnabled = false
         }else{
-            xo9.setBackgroundImage(UIImage(named: "circulozinho"), for: .normal)
+            xo9.setBackgroundImage(UIImage(named: "circle"), for: .normal)
             choose = 1
             xo9.isUserInteractionEnabled = false
         }
     }
     @IBAction func fechar(_ sender: Any) {
-        viewjogodavelha.isHidden = true
+        viewdeselecao.isHidden = false
         xo1.setBackgroundImage(UIImage(named: ""), for: .normal)
         xo1.isUserInteractionEnabled = true
         xo2.setBackgroundImage(UIImage(named: ""), for: .normal)
