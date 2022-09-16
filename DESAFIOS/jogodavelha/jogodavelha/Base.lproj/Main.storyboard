@@ -123,7 +123,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Sh-t0-6M1">
-                                <rect key="frame" x="14" y="245" width="348" height="372"/>
+                                <rect key="frame" x="13" y="147" width="348" height="372"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ou" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-sQ-0LF">
@@ -154,6 +154,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qr9-Gy-iXB">
+                                <rect key="frame" x="16" y="240" width="343" height="338"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -161,6 +166,7 @@
                     <connections>
                         <outlet property="CloseButton" destination="DWf-Ft-kYD" id="8Rr-7Z-5cI"/>
                         <outlet property="O" destination="rxg-4d-iq9" id="VoB-98-dL2"/>
+                        <outlet property="TeladeVitoria" destination="Qr9-Gy-iXB" id="Svu-4C-bAz"/>
                         <outlet property="X" destination="kk6-M8-Dhu" id="bDr-wc-Osr"/>
                         <outlet property="jogodavelha" destination="3Sh-t0-6M1" id="5VI-fz-jZ6"/>
                         <outlet property="xo1" destination="tdI-mF-M0U" id="IdE-9E-kFR"/>

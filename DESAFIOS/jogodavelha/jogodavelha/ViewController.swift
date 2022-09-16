@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var CloseButton: UIButton!
     // Second View (Jogo da Velha)
     @IBOutlet weak var jogodavelha: UIView!
+    // Tela para Vitória
+    @IBOutlet weak var TeladeVitoria: UIView!
     
     // Variável de escolha (x ou o)
     var Choose = 0
@@ -160,6 +162,13 @@ class ViewController: UIViewController {
         xo8.isUserInteractionEnabled = true
                 xo9.isUserInteractionEnabled = true
                 xo9.setBackgroundImage(UIImage(named: ""), for: .normal)
+    }
+    func vitoria(){
+        if xo1.backgroundImage(for: .normal) == xo2.backgroundImage(for: .normal) && xo2.backgroundImage(for: .normal) == xo3.backgroundImage(for: .normal){
+            TeladeVitoria.isHidden = false
+        }else{
+            
+        }
     }
     }
     

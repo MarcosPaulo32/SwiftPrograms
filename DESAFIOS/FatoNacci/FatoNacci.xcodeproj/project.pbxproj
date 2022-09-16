@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68B818F628CD1345007631B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B818F528CD1345007631B6 /* AppDelegate.swift */; };
-		68B818F828CD1345007631B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B818F728CD1345007631B6 /* SceneDelegate.swift */; };
-		68B818FA28CD1345007631B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B818F928CD1345007631B6 /* ViewController.swift */; };
-		68B818FD28CD1345007631B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B818FB28CD1345007631B6 /* Main.storyboard */; };
-		68B818FF28CD1345007631B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B818FE28CD1345007631B6 /* Assets.xcassets */; };
-		68B8190228CD1345007631B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B8190028CD1345007631B6 /* LaunchScreen.storyboard */; };
+		681C39F728D52B020046025F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681C39F628D52B020046025F /* AppDelegate.swift */; };
+		681C39F928D52B020046025F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681C39F828D52B020046025F /* SceneDelegate.swift */; };
+		681C39FB28D52B020046025F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681C39FA28D52B020046025F /* ViewController.swift */; };
+		681C39FE28D52B020046025F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681C39FC28D52B020046025F /* Main.storyboard */; };
+		681C3A0028D52B040046025F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681C39FF28D52B040046025F /* Assets.xcassets */; };
+		681C3A0328D52B040046025F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681C3A0128D52B040046025F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		68B818F228CD1345007631B6 /* jogodavelha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jogodavelha.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		68B818F528CD1345007631B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68B818F728CD1345007631B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68B818F928CD1345007631B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68B818FC28CD1345007631B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		68B818FE28CD1345007631B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		68B8190128CD1345007631B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		68B8190328CD1345007631B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		681C39F328D52B020046025F /* FatoNacci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FatoNacci.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		681C39F628D52B020046025F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		681C39F828D52B020046025F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		681C39FA28D52B020046025F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		681C39FD28D52B020046025F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		681C39FF28D52B040046025F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		681C3A0228D52B040046025F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		681C3A0428D52B040046025F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		68B818EF28CD1345007631B6 /* Frameworks */ = {
+		681C39F028D52B020046025F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		68B818E928CD1345007631B6 = {
+		681C39EA28D52B020046025F = {
 			isa = PBXGroup;
 			children = (
-				68B818F428CD1345007631B6 /* jogodavelha */,
-				68B818F328CD1345007631B6 /* Products */,
+				681C39F528D52B020046025F /* FatoNacci */,
+				681C39F428D52B020046025F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		68B818F328CD1345007631B6 /* Products */ = {
+		681C39F428D52B020046025F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68B818F228CD1345007631B6 /* jogodavelha.app */,
+				681C39F328D52B020046025F /* FatoNacci.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		68B818F428CD1345007631B6 /* jogodavelha */ = {
+		681C39F528D52B020046025F /* FatoNacci */ = {
 			isa = PBXGroup;
 			children = (
-				68B818F528CD1345007631B6 /* AppDelegate.swift */,
-				68B818F728CD1345007631B6 /* SceneDelegate.swift */,
-				68B818F928CD1345007631B6 /* ViewController.swift */,
-				68B818FB28CD1345007631B6 /* Main.storyboard */,
-				68B818FE28CD1345007631B6 /* Assets.xcassets */,
-				68B8190028CD1345007631B6 /* LaunchScreen.storyboard */,
-				68B8190328CD1345007631B6 /* Info.plist */,
+				681C39F628D52B020046025F /* AppDelegate.swift */,
+				681C39F828D52B020046025F /* SceneDelegate.swift */,
+				681C39FA28D52B020046025F /* ViewController.swift */,
+				681C39FC28D52B020046025F /* Main.storyboard */,
+				681C39FF28D52B040046025F /* Assets.xcassets */,
+				681C3A0128D52B040046025F /* LaunchScreen.storyboard */,
+				681C3A0428D52B040046025F /* Info.plist */,
 			);
-			path = jogodavelha;
+			path = FatoNacci;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		68B818F128CD1345007631B6 /* jogodavelha */ = {
+		681C39F228D52B020046025F /* FatoNacci */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68B8190628CD1345007631B6 /* Build configuration list for PBXNativeTarget "jogodavelha" */;
+			buildConfigurationList = 681C3A0728D52B040046025F /* Build configuration list for PBXNativeTarget "FatoNacci" */;
 			buildPhases = (
-				68B818EE28CD1345007631B6 /* Sources */,
-				68B818EF28CD1345007631B6 /* Frameworks */,
-				68B818F028CD1345007631B6 /* Resources */,
+				681C39EF28D52B020046025F /* Sources */,
+				681C39F028D52B020046025F /* Frameworks */,
+				681C39F128D52B020046025F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = jogodavelha;
-			productName = jogodavelha;
-			productReference = 68B818F228CD1345007631B6 /* jogodavelha.app */;
+			name = FatoNacci;
+			productName = FatoNacci;
+			productReference = 681C39F328D52B020046025F /* FatoNacci.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		68B818EA28CD1345007631B6 /* Project object */ = {
+		681C39EB28D52B020046025F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					68B818F128CD1345007631B6 = {
+					681C39F228D52B020046025F = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 68B818ED28CD1345007631B6 /* Build configuration list for PBXProject "jogodavelha" */;
+			buildConfigurationList = 681C39EE28D52B020046025F /* Build configuration list for PBXProject "FatoNacci" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 68B818E928CD1345007631B6;
-			productRefGroup = 68B818F328CD1345007631B6 /* Products */;
+			mainGroup = 681C39EA28D52B020046025F;
+			productRefGroup = 681C39F428D52B020046025F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				68B818F128CD1345007631B6 /* jogodavelha */,
+				681C39F228D52B020046025F /* FatoNacci */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		68B818F028CD1345007631B6 /* Resources */ = {
+		681C39F128D52B020046025F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B8190228CD1345007631B6 /* LaunchScreen.storyboard in Resources */,
-				68B818FF28CD1345007631B6 /* Assets.xcassets in Resources */,
-				68B818FD28CD1345007631B6 /* Main.storyboard in Resources */,
+				681C3A0328D52B040046025F /* LaunchScreen.storyboard in Resources */,
+				681C3A0028D52B040046025F /* Assets.xcassets in Resources */,
+				681C39FE28D52B020046025F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		68B818EE28CD1345007631B6 /* Sources */ = {
+		681C39EF28D52B020046025F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B818FA28CD1345007631B6 /* ViewController.swift in Sources */,
-				68B818F628CD1345007631B6 /* AppDelegate.swift in Sources */,
-				68B818F828CD1345007631B6 /* SceneDelegate.swift in Sources */,
+				681C39FB28D52B020046025F /* ViewController.swift in Sources */,
+				681C39F728D52B020046025F /* AppDelegate.swift in Sources */,
+				681C39F928D52B020046025F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		68B818FB28CD1345007631B6 /* Main.storyboard */ = {
+		681C39FC28D52B020046025F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				68B818FC28CD1345007631B6 /* Base */,
+				681C39FD28D52B020046025F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		68B8190028CD1345007631B6 /* LaunchScreen.storyboard */ = {
+		681C3A0128D52B040046025F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				68B8190128CD1345007631B6 /* Base */,
+				681C3A0228D52B040046025F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		68B8190428CD1345007631B6 /* Debug */ = {
+		681C3A0528D52B040046025F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		68B8190528CD1345007631B6 /* Release */ = {
+		681C3A0628D52B040046025F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,17 +280,15 @@
 			};
 			name = Release;
 		};
-		68B8190728CD1345007631B6 /* Debug */ = {
+		681C3A0828D52B040046025F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = jogodavelha/Info.plist;
+				INFOPLIST_FILE = FatoNacci/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,26 +299,23 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Marcos.jogodavelha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcos.FatoNacci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		68B8190828CD1345007631B6 /* Release */ = {
+		681C3A0928D52B040046025F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = jogodavelha/Info.plist;
+				INFOPLIST_FILE = FatoNacci/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -331,9 +326,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Marcos.jogodavelha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcos.FatoNacci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		68B818ED28CD1345007631B6 /* Build configuration list for PBXProject "jogodavelha" */ = {
+		681C39EE28D52B020046025F /* Build configuration list for PBXProject "FatoNacci" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				68B8190428CD1345007631B6 /* Debug */,
-				68B8190528CD1345007631B6 /* Release */,
+				681C3A0528D52B040046025F /* Debug */,
+				681C3A0628D52B040046025F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68B8190628CD1345007631B6 /* Build configuration list for PBXNativeTarget "jogodavelha" */ = {
+		681C3A0728D52B040046025F /* Build configuration list for PBXNativeTarget "FatoNacci" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				68B8190728CD1345007631B6 /* Debug */,
-				68B8190828CD1345007631B6 /* Release */,
+				681C3A0828D52B040046025F /* Debug */,
+				681C3A0928D52B040046025F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 68B818EA28CD1345007631B6 /* Project object */;
+	rootObject = 681C39EB28D52B020046025F /* Project object */;
 }
