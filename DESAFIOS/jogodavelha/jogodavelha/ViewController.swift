@@ -53,6 +53,10 @@ class ViewController: UIViewController {
             Choose = 1
             xo1.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
+        
     }
     @IBAction func XO2(_ sender: Any) {
         if Choose == 1 {
@@ -64,6 +68,9 @@ class ViewController: UIViewController {
             Choose = 1
             xo2.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
     }
     @IBAction func XO3(_ sender: Any) {
         if Choose == 1 {
@@ -75,6 +82,9 @@ class ViewController: UIViewController {
             Choose = 1
             xo3.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
     }
     @IBAction func XO4(_ sender: Any) {
         if Choose == 1 {
@@ -86,6 +96,9 @@ class ViewController: UIViewController {
             Choose = 1
             xo4.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
     }
     @IBAction func XO5(_ sender: Any) {
         if Choose == 1 {
@@ -97,6 +110,9 @@ class ViewController: UIViewController {
             Choose = 1
             xo5.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
     }
     @IBAction func XO6(_ sender: Any) {
         if Choose == 1 {
@@ -108,6 +124,9 @@ class ViewController: UIViewController {
             Choose = 1
             xo6.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
     }
     @IBAction func XO7(_ sender: Any) {
         if Choose == 1 {
@@ -119,6 +138,9 @@ class ViewController: UIViewController {
             Choose = 1
             xo7.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
     }
     @IBAction func XO8(_ sender: Any) {
         if Choose == 1 {
@@ -130,6 +152,9 @@ class ViewController: UIViewController {
             Choose = 1
             xo8.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
     }
     @IBAction func XO9(_ sender: Any) {
         if Choose == 1 {
@@ -141,6 +166,9 @@ class ViewController: UIViewController {
             Choose = 1
             xo9.isUserInteractionEnabled = false
         }
+        vitoriadascolunas()
+        vitoriadaslinhas()
+        vitoriadasdiagonais()
     }
     @IBAction func CloseButton(_ sender: Any) {
         jogodavelha.isHidden = false
@@ -163,14 +191,56 @@ class ViewController: UIViewController {
                 xo9.isUserInteractionEnabled = true
                 xo9.setBackgroundImage(UIImage(named: ""), for: .normal)
     }
-    func vitoria(){
-        if xo1.backgroundImage(for: .normal) == xo2.backgroundImage(for: .normal) && xo2.backgroundImage(for: .normal) == xo3.backgroundImage(for: .normal){
+    @IBAction func CloseWin(_ sender: Any) {
+        jogodavelha.isHidden = false
+        TeladeVitoria.isHidden = true
+        xo1.setBackgroundImage(UIImage(named: ""), for: .normal)
+        xo1.isUserInteractionEnabled = true
+        xo2.setBackgroundImage(UIImage(named: ""), for: .normal)
+        xo2.isUserInteractionEnabled = true
+        xo3.setBackgroundImage(UIImage(named: ""), for: .normal)
+        xo3.isUserInteractionEnabled = true
+        xo4.setBackgroundImage(UIImage(named: ""), for: .normal)
+        xo4.isUserInteractionEnabled = true
+        xo5.setBackgroundImage(UIImage(named: ""), for: .normal)
+xo5.isUserInteractionEnabled = true
+        xo6.isUserInteractionEnabled = true
+        xo6.setBackgroundImage(UIImage(named: ""), for: .normal)
+xo7.setBackgroundImage(UIImage(named: ""), for: .normal)
+        xo7.isUserInteractionEnabled = true
+        xo8.setBackgroundImage(UIImage(named: ""), for: .normal)
+xo8.isUserInteractionEnabled = true
+        xo9.isUserInteractionEnabled = true
+        xo9.setBackgroundImage(UIImage(named: ""), for: .normal)
+    }
+    func vitoriadascolunas(){
+        if xo1.backgroundImage(for: .normal) == xo2.backgroundImage(for: .normal) && xo2.backgroundImage(for: .normal) == xo3.backgroundImage(for: .normal) && (xo1.backgroundImage(for: .normal) == UIImage(named: "xiszinho") || xo1.backgroundImage(for: .normal) == UIImage(named:"circulozinho")){
             TeladeVitoria.isHidden = false
-        }else{
-            
+        }else if
+            xo4.backgroundImage(for: .normal) == xo5.backgroundImage(for: .normal) && xo5.backgroundImage(for: .normal) == xo6.backgroundImage(for: .normal) && (xo4.backgroundImage(for: .normal) == UIImage(named: "xiszinho") || xo4.backgroundImage(for: .normal) == UIImage(named:"circulozinho")){
+                TeladeVitoria.isHidden = false
+            }else if
+                xo7.backgroundImage(for: .normal) == xo8.backgroundImage(for: .normal) && xo8.backgroundImage(for: .normal) == xo9.backgroundImage(for: .normal) && (xo7.backgroundImage(for: .normal) == UIImage(named: "xiszinho") || xo7.backgroundImage(for: .normal) == UIImage(named:"circulozinho")){
+                    TeladeVitoria.isHidden = false
+                }
+}
+    func vitoriadaslinhas(){
+        if xo1.backgroundImage(for: .normal) == xo4.backgroundImage(for: .normal) && xo4.backgroundImage(for: .normal) == xo7.backgroundImage(for: .normal) && (xo1.backgroundImage(for: .normal) == UIImage(named: "xiszinho") || xo1.backgroundImage(for: .normal) == UIImage(named:"circulozinho")){
+            TeladeVitoria.isHidden = false
+    }else if
+        xo2.backgroundImage(for: .normal) == xo5.backgroundImage(for: .normal) && xo5.backgroundImage(for: .normal) == xo8.backgroundImage(for: .normal) && (xo2.backgroundImage(for: .normal) == UIImage(named: "xiszinho") || xo2.backgroundImage(for: .normal) == UIImage(named:"circulozinho")){
+            TeladeVitoria.isHidden = false
+    }else if
+        xo3.backgroundImage(for: .normal) == xo6.backgroundImage(for: .normal) && xo6.backgroundImage(for: .normal) == xo9.backgroundImage(for: .normal) && (xo3.backgroundImage(for: .normal) == UIImage(named: "xiszinho") || xo3.backgroundImage(for: .normal) == UIImage(named:"circulozinho")){
+            TeladeVitoria.isHidden = false
+    }
+    }
+        func vitoriadasdiagonais(){
+            if xo1.backgroundImage(for: .normal) == xo5.backgroundImage(for: .normal) && xo5.backgroundImage(for: .normal) == xo9.backgroundImage(for: .normal) && (xo1.backgroundImage(for: .normal) == UIImage(named: "xiszinho") || xo1.backgroundImage(for: .normal) == UIImage(named:"circulozinho")){
+                TeladeVitoria.isHidden = false
+        }else if
+            xo7.backgroundImage(for: .normal) == xo5.backgroundImage(for: .normal) && xo5.backgroundImage(for: .normal) == xo3.backgroundImage(for: .normal) && (xo7.backgroundImage(for: .normal) == UIImage(named: "xiszinho") || xo7.backgroundImage(for: .normal) == UIImage(named:"circulozinho")){
+                TeladeVitoria.isHidden = false
+        }
         }
     }
-    }
-    
-
-
