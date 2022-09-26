@@ -15,7 +15,6 @@ class FatorarController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func ReturnMainView(primeira: UIStoryboardSegue){}
     @IBAction func btCalculoFatorar(_ sender: Any) {
         if let number = Int(txtFatorar.text!){
             var resultado = 1
