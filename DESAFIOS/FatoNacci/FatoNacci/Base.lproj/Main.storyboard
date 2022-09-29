@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKP-5J-g9q">
-                                <rect key="frame" x="116" y="316.5" width="143" height="34"/>
+                                <rect key="frame" x="145.5" y="316.5" width="84" height="34"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="El Fibonnaci">
@@ -50,32 +50,30 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fibonnaci" translatesAutoresizingMaskIntoConstraints="NO" id="dcd-Rr-I5D">
-                                <rect key="frame" x="128" y="172" width="120" height="136"/>
+                                <rect key="frame" x="128" y="172" width="119" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="mxU-Qx-fCF"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.33677138842068266" green="0.59475676546391754" blue="0.10609523898496616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hKP-5J-g9q" firstAttribute="top" secondItem="dcd-Rr-I5D" secondAttribute="bottom" constant="8.5" id="0wh-9B-fA2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PVu-ML-GJ0" secondAttribute="trailing" constant="105" id="3FF-d6-74g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bGe-FS-cnt" secondAttribute="trailing" constant="30" id="5Rn-RU-xbT"/>
-                            <constraint firstItem="veo-gJ-WSt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="106" id="87E-xW-E1N"/>
-                            <constraint firstItem="veo-gJ-WSt" firstAttribute="top" secondItem="hKP-5J-g9q" secondAttribute="bottom" constant="63.5" id="8F0-HI-mqx"/>
-                            <constraint firstItem="hKP-5J-g9q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8G0-2E-FXS"/>
-                            <constraint firstItem="dcd-Rr-I5D" firstAttribute="width" secondItem="hKP-5J-g9q" secondAttribute="width" multiplier="0.839161" id="CfH-dd-YqP"/>
-                            <constraint firstItem="bGe-FS-cnt" firstAttribute="width" secondItem="hKP-5J-g9q" secondAttribute="width" multiplier="1.97902" id="DOP-KK-fFe"/>
-                            <constraint firstItem="PVu-ML-GJ0" firstAttribute="top" secondItem="hKP-5J-g9q" secondAttribute="bottom" constant="239.5" id="FFs-27-NcZ"/>
-                            <constraint firstItem="veo-gJ-WSt" firstAttribute="width" secondItem="hKP-5J-g9q" secondAttribute="width" multiplier="1.00699" id="Kli-ib-fSY"/>
-                            <constraint firstItem="PVu-ML-GJ0" firstAttribute="top" secondItem="hKP-5J-g9q" secondAttribute="bottom" constant="239.5" id="Sgu-de-tQT"/>
-                            <constraint firstItem="bGe-FS-cnt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="WW0-vn-gBS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dcd-Rr-I5D" secondAttribute="trailing" constant="111" id="You-BX-OAF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hKP-5J-g9q" secondAttribute="trailing" constant="100" id="cJb-GE-8Ux"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="veo-gJ-WSt" secondAttribute="trailing" constant="93" id="eFX-Ik-xXd"/>
-                            <constraint firstItem="hKP-5J-g9q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="m6A-jA-K19"/>
-                            <constraint firstItem="hKP-5J-g9q" firstAttribute="top" secondItem="bGe-FS-cnt" secondAttribute="bottom" constant="157" id="nQx-Sw-pvV"/>
-                            <constraint firstItem="dcd-Rr-I5D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="112" id="oSi-qx-Mj6"/>
-                            <constraint firstItem="PVu-ML-GJ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" id="r8d-uP-rlg"/>
-                            <constraint firstItem="dcd-Rr-I5D" firstAttribute="top" secondItem="bGe-FS-cnt" secondAttribute="bottom" constant="12.5" id="tWy-kv-CNr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PVu-ML-GJ0" secondAttribute="trailing" constant="105" id="30V-8d-21s"/>
+                            <constraint firstItem="PVu-ML-GJ0" firstAttribute="top" secondItem="hKP-5J-g9q" secondAttribute="bottom" constant="239.5" id="33Y-Dt-yu0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bGe-FS-cnt" secondAttribute="trailing" constant="30" id="56u-av-GM3"/>
+                            <constraint firstItem="dcd-Rr-I5D" firstAttribute="centerX" secondItem="hKP-5J-g9q" secondAttribute="centerX" id="CSc-Eu-OUE"/>
+                            <constraint firstItem="veo-gJ-WSt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="106" id="OYX-5F-ZCF"/>
+                            <constraint firstItem="PVu-ML-GJ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" id="TNr-Fk-6QX"/>
+                            <constraint firstItem="veo-gJ-WSt" firstAttribute="top" secondItem="hKP-5J-g9q" secondAttribute="bottom" constant="63.5" id="d3x-SW-fET"/>
+                            <constraint firstItem="hKP-5J-g9q" firstAttribute="top" secondItem="dcd-Rr-I5D" secondAttribute="bottom" constant="8.5" id="ffN-Ma-3Q7"/>
+                            <constraint firstItem="bGe-FS-cnt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="naZ-A1-Xrb"/>
+                            <constraint firstItem="hKP-5J-g9q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="o1F-Ai-2Rl"/>
+                            <constraint firstItem="hKP-5J-g9q" firstAttribute="top" secondItem="dcd-Rr-I5D" secondAttribute="bottom" constant="8.5" id="rX0-YZ-hl0"/>
+                            <constraint firstItem="dcd-Rr-I5D" firstAttribute="top" secondItem="bGe-FS-cnt" secondAttribute="bottom" constant="12.5" id="uph-dO-FaH"/>
+                            <constraint firstItem="dcd-Rr-I5D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="vzt-WR-Liz"/>
+                            <constraint firstItem="dcd-Rr-I5D" firstAttribute="centerX" secondItem="bGe-FS-cnt" secondAttribute="centerX" id="xst-Tl-EOC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="veo-gJ-WSt" secondAttribute="trailing" constant="93" id="zFX-dY-YAQ"/>
                         </constraints>
                     </view>
                 </viewController>
