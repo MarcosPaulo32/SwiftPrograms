@@ -70,9 +70,9 @@ class campofacilViewController: UIViewController {
         for i in 0...4{
             for j in 0...4{
                 boardA[i][j].layer.borderColor = (UIColor.black).cgColor
-            boardA[i][j].layer.borderWidth = 1
-            boardA[i][j].backgroundColor = UIColor.lightGray
-            boardA[i][j].setTitle("", for: .normal)
+                boardA[i][j].layer.borderWidth = 1
+                boardA[i][j].backgroundColor = UIColor.lightGray
+                boardA[i][j].setTitle("", for: .normal)
             }
         }
     }
@@ -86,8 +86,475 @@ class campofacilViewController: UIViewController {
                     boardB[i][j] = 0
                 }
             }
-            for _ in 0...4{
-                
+            for _ in 0...4 {
+                bombacoorI = Int(arc4random_uniform(5))
+                bombacoorJ = Int(arc4random_uniform(5))
+                while (boardB[bombacoorI][bombacoorJ] == -1 || (bombacoorI == x && bombacoorJ == y)) {
+                    bombacoorI = Int(arc4random_uniform(5));
+                    bombacoorJ = Int(arc4random_uniform(5));
+                }
+                boardB[bombacoorI][bombacoorJ] = -1;
+                if (bombacoorI + 1 < 5 ) {
+                    if (boardB[bombacoorI + 1][bombacoorJ] != -1) {
+                        boardB[bombacoorI + 1 ][bombacoorJ] += 1;
+                    }
+                    
+                }
+                if (bombacoorI - 1 > -1){
+                    if (boardB[bombacoorI - 1][bombacoorJ] != -1) {
+                        boardB[bombacoorI - 1][bombacoorJ] += 1;
+                    }
+                }
+                if (bombacoorI + 1 < 5){
+                    if (boardB[bombacoorI][bombacoorJ] != -1) {
+                        boardB[bombacoorI][bombacoorJ] += 1;
+                    }
+                }
+                if (bombacoorI - 1 > -1){
+                    if (boardB[bombacoorI][bombacoorJ] != -1) {
+                        boardB[bombacoorI][bombacoorJ] += 1;
+                    }
+                }
+                if (bombacoorI + 1 < 5 && bombacoorJ + 1 < 5){
+                    if (boardB[bombacoorI + 1][bombacoorJ + 1] != -1) {
+                        boardB[bombacoorI + 1][bombacoorJ + 1] += 1;
+                    }
+                }
+                if (bombacoorI + 1 < 5 && bombacoorJ - 1 > -1){
+                    if (boardB[bombacoorI + 1][bombacoorJ - 1] != -1) {
+                        boardB[bombacoorI + 1][bombacoorJ - 1] += 1;
+                    }
+                }
+                if (bombacoorI - 1 > -1 && bombacoorJ + 1 < 5){
+                    if (boardB[bombacoorI - 1][bombacoorJ + 1] != -1) {
+                        boardB[bombacoorI - 1][bombacoorJ + 1] += 1;
+                    }
+                }
+                if (bombacoorI - 1 > -1 && bombacoorJ - 1 > -1){
+                    if (boardB[bombacoorI - 1][bombacoorJ - 1] != -1) {
+                        boardB[bombacoorI - 1][bombacoorJ - 1] += 1;
+                    }
+                }
+            }
+        } while (boardB[x][y] != 0)
+    }
+    func zero(_ x: Int, _ y: Int){
+        if (y + 1 < 5){
+            if (boardB[x][y + 1] == 0){
+                boardB[x][y + 1] = -2
+                boardA[x][y + 1].backgroundColor = UIColor.white
+                boardA[x][y + 1].isUserInteractionEnabled = false
+                zero(x, y + 1)
+                boardA[x][y].setTitle(String(boardB[x][y]), for: .normal)
+                if (y + 1 < 5){
+                    boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                    boardA[x][y + 1].isUserInteractionEnabled = false
+                }
+                if (y - 1 > -1){
+                    boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                    boardA[x][y - 1].backgroundColor = UIColor.white
+                    boardA[x][y - 1].isUserInteractionEnabled = false
+                }
+                if (x + 1 < 5){
+                    boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                    boardA[x + 1][y].backgroundColor = UIColor.white
+                    boardA[x + 1][y].isUserInteractionEnabled = false
+                }
+                if (x + 1 < 5 && y + 1 < 5){
+                    boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                    boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                    boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                }
+                if (x + 1 < 5 && y - 1 > -1){
+                    boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                    boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                    boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                }
+                if (x - 1 > -1){
+                    boardA[x - 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                    boardA[x - 1][y].backgroundColor = UIColor.white
+                    boardA[x - 1][y].isUserInteractionEnabled = false
+                }
+                if (x - 1 > -1 && y + 1 < 5){
+                    boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                    boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                    boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                }
+                if (x - 1 > -1 && y - 1 > -1){
+                    boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                    boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                    boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                }
+            }
+        }
+        if (y - 1 > -1){
+            if (boardB[x][y - 1] == 0){
+                boardB[x][y - 1] = -2
+                boardA[x][y - 1].backgroundColor = UIColor.white
+                boardA[x][y - 1].isUserInteractionEnabled = false
+                zero(x, y - 1)
+                boardA[x][y].setTitle(String(boardB[x][y]), for: .normal)
+                if (y + 1 < 5){
+                    boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                    boardA[x][y + 1].backgroundColor = UIColor.white
+                    boardA[x][y + 1].isUserInteractionEnabled = false
+                }
+                if (y - 1 > -1){
+                    boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                    boardA[x][y - 1].backgroundColor = UIColor.white
+                    boardA[x][y - 1].isUserInteractionEnabled = false
+                }
+                if (x + 1 < 5){
+                    boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                    boardA[x + 1][y].backgroundColor = UIColor.white
+                    boardA[x + 1][y].isUserInteractionEnabled = false
+                }
+                if (x + 1 < 5 && y + 1 < 5){
+                    boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                    boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                    boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                }
+                if (x + 1 < 5 && y + 1 > -1){
+                    boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                    boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                    boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                }
+                if (x - 1 > -1){
+                    boardA[x - 1][y].setTitle(String(boardB[x - 1][y]), for: .normal)
+                    boardA[x - 1][y].backgroundColor = UIColor.white
+                    boardA[x - 1][y].isUserInteractionEnabled = false
+                }
+                if (x - 1 > -1 && y + 1 < 5){
+                    boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                    boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                    boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                }
+                if (x - 1 > -1 && y - 1 > -1){
+                    boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                    boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                    boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                }
+                if (x + 1 < 5){
+                    if (y + 1 < 5){
+                        boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                        boardA[x][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (y - 1 > -1){
+                        boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                        boardA[x][y - 1].backgroundColor = UIColor.white
+                        boardA[x][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5){
+                        boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x + 1][y].backgroundColor = UIColor.white
+                        boardA[x + 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y + 1 < 5){
+                        boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                        boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y - 1 > -1){
+                        boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                        boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1){
+                        boardA[x - 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x - 1][y].backgroundColor = UIColor.white
+                        boardA[x - 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y + 1 < 5){
+                        boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                        boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y - 1 > -1){
+                        boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                        boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                    }
+                }
+            }
+            if (x + 1 < 5 && y + 1 < 5){
+                if (boardB[x + 1][y + 1] == 0){
+                    boardB[x + 1][y + 1] = -2
+                    boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                    boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                    zero(x + 1, y + 1)
+                    boardA[x][y].setTitle(String(boardB[x][y]), for: .normal)
+                    if (y + 1 < 5){
+                        boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                        boardA[x][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (y - 1 > -1){
+                        boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                        boardA[x][y - 1].backgroundColor = UIColor.white
+                        boardA[x][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5){
+                        boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x + 1][y].backgroundColor = UIColor.white
+                        boardA[x + 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y + 1 < 5){
+                        boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                        boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y - 1 > -1){
+                        boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                        boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1){
+                        boardA[x - 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x - 1][y].backgroundColor = UIColor.white
+                        boardA[x - 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y + 1 < 5){
+                        boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                        boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y - 1 > -1){
+                        boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                        boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                    }
+                }
+            }
+            if (x + 1 < 5 && y - 1 > -1){
+                if (boardB[x + 1][y - 1] == 0){
+                    boardB[x + 1][y - 1] = -2
+                    boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                    boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                    zero(x + 1, y - 1)
+                    boardA[x][y].setTitle(String(boardB[x][y]), for: .normal)
+                    if (y + 1 < 5){
+                        boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                        boardA[x][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (y - 1 > -1){
+                        boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                        boardA[x][y - 1].backgroundColor = UIColor.white
+                        boardA[x][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5){
+                        boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x + 1][y].backgroundColor = UIColor.white
+                        boardA[x + 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y + 1 < 5){
+                        boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                        boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y - 1 > -1){
+                        boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                        boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1){
+                        boardA[x - 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x - 1][y].backgroundColor = UIColor.white
+                        boardA[x - 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y + 1 < 5){
+                        boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                        boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y - 1 > -1){
+                        boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                        boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                    }
+                }
+            }
+            if (x - 1 > -1){
+                if (boardB[x - 1][y] == 0){
+                    boardB[x - 1][y] = -2
+                    boardA[x - 1][y].backgroundColor = UIColor.white
+                    boardA[x - 1][y].isUserInteractionEnabled = false
+                    zero(x - 1, y)
+                    boardA[x][y].setTitle(String(boardB[x][y]), for: .normal)
+                    if (y + 1 < 5){
+                        boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                        boardA[x][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (y - 1 > -1){
+                        boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                        boardA[x][y - 1].backgroundColor = UIColor.white
+                        boardA[x][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5){
+                        boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x + 1][y].backgroundColor = UIColor.white
+                        boardA[x + 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y + 1 < 5){
+                        boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                        boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y - 1 > -1){
+                        boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                        boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1){
+                        boardA[x - 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x - 1][y].backgroundColor = UIColor.white
+                        boardA[x - 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y + 1 < 5){
+                        boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                        boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y - 1 > -1){
+                        boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                        boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                    }
+                }
+            }
+            if (x - 1 > -1 && y + 1 < 5){
+                if (boardB[x - 1][y + 1] == 0){
+                    boardB[x - 1][y + 1] = -2
+                    boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                    boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                    zero(x - 1, y + 1)
+                    boardA[x][y].setTitle(String(boardB[x][y]), for: .normal)
+                    if (y + 1 < 5){
+                        boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                        boardA[x][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (y - 1 > -1){
+                        boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                        boardA[x][y - 1].backgroundColor = UIColor.white
+                        boardA[x][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5){
+                        boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x + 1][y].backgroundColor = UIColor.white
+                        boardA[x + 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y + 1 < 5){
+                        boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                        boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y - 1 > -1){
+                        boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                        boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1){
+                        boardA[x - 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x - 1][y].backgroundColor = UIColor.white
+                        boardA[x - 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y + 1 < 5){
+                        boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                        boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y - 1 > -1){
+                        boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                        boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                    }
+                }
+            }
+            if (x - 1 > -1 && y - 1 > -1){
+                if (boardB[x - 1][y - 1] == 0){
+                    boardB[x - 1][y - 1] = -2
+                    boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                    boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                    zero(x - 1, y - 1)
+                    boardA[x][y].setTitle(String(boardB[x][y]), for: .normal)
+                    if (y + 1 < 5){
+                        boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                        boardA[x][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (y - 1 > -1){
+                        boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                        boardA[x][y - 1].backgroundColor = UIColor.white
+                        boardA[x][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5){
+                        boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x + 1][y].backgroundColor = UIColor.white
+                        boardA[x + 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y + 1 < 5){
+                        boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                        boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x + 1 < 5 && y - 1 > -1){
+                        boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                        boardA[x + 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x + 1][y - 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1){
+                        boardA[x - 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                        boardA[x - 1][y].backgroundColor = UIColor.white
+                        boardA[x - 1][y].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y + 1 < 5){
+                        boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                        boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y + 1].isUserInteractionEnabled = false
+                    }
+                    if (x - 1 > -1 && y - 1 > -1){
+                        boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                        boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                        boardA[x - 1][y - 1].isUserInteractionEnabled = false
+                    }
+                }
+            }
+            if (y + 1 < 5){
+                boardA[x][y + 1].setTitle(String(boardB[x][y + 1]), for: .normal)
+                boardA[x][y + 1].backgroundColor = UIColor.white
+                boardA[x][y + 1].isUserInteractionEnabled = false
+            }
+            if (y - 1 < 5){
+                boardA[x][y - 1].setTitle(String(boardB[x][y - 1]), for: .normal)
+                boardA[x][y - 1].backgroundColor = UIColor.white
+                boardA[x][y - 1].isUserInteractionEnabled = false
+            }
+            if (x + 1 < 5){
+                boardA[x + 1][y].setTitle(String(boardB[x + 1][y]), for: .normal)
+                boardA[x + 1][y].backgroundColor = UIColor.white
+                boardA[x + 1][y].isUserInteractionEnabled = false
+            }
+            if (x + 1 < 5 && y + 1 < 5){
+                boardA[x + 1][y + 1].setTitle(String(boardB[x + 1][y + 1]), for: .normal)
+                boardA[x + 1][y + 1].backgroundColor = UIColor.white
+                boardA[x + 1][y + 1].isUserInteractionEnabled = false
+            }
+            if (x + 1 < 5 && y - 1 > -1){
+                boardA[x + 1][y - 1].setTitle(String(boardB[x + 1][y - 1]), for: .normal)
+                boardA[x + 1 ][y - 1].backgroundColor = UIColor.white
+                boardA[x + 1][y - 1].isUserInteractionEnabled = false
+            }
+            if (x - 1 > -1){
+                boardA[x - 1][y].setTitle(String(boardB[x - 1][y]), for: .normal)
+                boardA[x - 1][y].backgroundColor = UIColor.white
+                boardA[x - 1][y].isUserInteractionEnabled = false
+            }
+            if (x - 1 > -1 && y + 1 < 5){
+                boardA[x - 1][y + 1].setTitle(String(boardB[x - 1][y + 1]), for: .normal)
+                boardA[x - 1][y + 1].backgroundColor = UIColor.white
+                boardA[x - 1][y + 1].isUserInteractionEnabled = false
+            }
+            if (x - 1 > -1 && y - 1 > -1){
+                boardA[x - 1][y - 1].setTitle(String(boardB[x - 1][y - 1]), for: .normal)
+                boardA[x - 1][y - 1].backgroundColor = UIColor.white
+                boardA[x - 1][y - 1].isUserInteractionEnabled = false
             }
         }
     }
