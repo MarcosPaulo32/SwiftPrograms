@@ -52,6 +52,7 @@ class Game: ObservableObject {
             return
         }
         cell.isFlagged = !cell.isFlagged
+        self.objectWillChange.send()
         if(isPlayerWon()){
             showResult = true
             isWon = true

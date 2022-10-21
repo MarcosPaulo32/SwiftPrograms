@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C40895212901EA6700590223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40895202901EA6700590223 /* AppDelegate.swift */; };
-		C40895232901EA6700590223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40895222901EA6700590223 /* SceneDelegate.swift */; };
-		C40895252901EA6700590223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40895242901EA6700590223 /* ViewController.swift */; };
 		C40895282901EA6700590223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40895262901EA6700590223 /* Main.storyboard */; };
 		C408952A2901EA6700590223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40895292901EA6700590223 /* Assets.xcassets */; };
 		C408952D2901EA6700590223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C408952B2901EA6700590223 /* LaunchScreen.storyboard */; };
@@ -24,9 +21,6 @@
 
 /* Begin PBXFileReference section */
 		C408951D2901EA6700590223 /* Minesweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minesweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C40895202901EA6700590223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C40895222901EA6700590223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C40895242901EA6700590223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C40895272901EA6700590223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C40895292901EA6700590223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C408952C2901EA6700590223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,9 +66,6 @@
 			children = (
 				C48734DA2901EDD50002298C /* View */,
 				C48734D72901ECA40002298C /* Model */,
-				C40895202901EA6700590223 /* AppDelegate.swift */,
-				C40895222901EA6700590223 /* SceneDelegate.swift */,
-				C40895242901EA6700590223 /* ViewController.swift */,
 				C48734E32901FB340002298C /* CampoMinado.swift */,
 				C40895262901EA6700590223 /* Main.storyboard */,
 				C40895292901EA6700590223 /* Assets.xcassets */,
@@ -178,12 +169,9 @@
 				C48734D62901EB350002298C /* GameSettings.swift in Sources */,
 				C48734DE2901EF5D0002298C /* Cell+Status.swift in Sources */,
 				C48734D92901ECB20002298C /* Jogo.swift in Sources */,
-				C40895252901EA6700590223 /* ViewController.swift in Sources */,
 				C48734E42901FB340002298C /* CampoMinado.swift in Sources */,
 				C48734E02901F0930002298C /* CellView.swift in Sources */,
-				C40895212901EA6700590223 /* AppDelegate.swift in Sources */,
 				C48734E22901F37A0002298C /* BoardView.swift in Sources */,
-				C40895232901EA6700590223 /* SceneDelegate.swift in Sources */,
 				C48734DC2901EE010002298C /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

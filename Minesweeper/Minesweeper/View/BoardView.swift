@@ -13,9 +13,9 @@ struct BoardView: View{
                 }
             }
         }.alert(isPresented: $game.showResult){
-            Alert(title: Text(game.isWon ? "Wow" : "Oh no"),
-                  message: Text(game.isWon ? "Você vence" : "Mais sorte na próxima"),
-                  primaryButton: .destructive(Text("Reset")) {
+            Alert(title: Text(game.isWon ? "BOA" : "Que pena"),
+                  message: Text(game.isWon ? "Você venceu" : "Mais sorte na próxima"),
+                  primaryButton: .destructive(Text("Recomeçar")) {
                 game.reset()
             }, secondaryButton: .cancel())
         }
